@@ -13,6 +13,7 @@ import {
 
 // private components:
 import { SectionHero }      from './SectionHero'
+import { SectionLorem }     from './SectionLorem'
 
 
 
@@ -24,77 +25,9 @@ export function HomePageContent(): JSX.Element|null {
             // variants:
             nude={true}
         >
-            <section>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-            </section>
+            <SectionLorem />
             <SectionHero />
-            <section>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta natus molestiae in inventore quis ab magni reprehenderit dolore doloribus, provident ipsum ipsam est aliquid animi praesentium dolorum quidem qui beatae?
-                </p>
-            </section>
+            <SectionLorem />
         </Main>
     );
 }

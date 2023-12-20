@@ -101,7 +101,7 @@ export function SectionHero(): JSX.Element|null {
         >
             <div className={`${styleSheet.overlay} ${styleSheet.overlay1}`}>
                 <div ref={dummyArticleIntroRef} className={styleSheet.intro} />
-                <Article className={styleSheet.features} theme='danger'>
+                <Article className={styleSheet.features}>
                     <List className={styleSheet.featuresList} listStyle='flush' mild={false}>
                         <ListItem>
                             <Icon className='icon' theme='primary' mild icon='bulb' size='lg' />

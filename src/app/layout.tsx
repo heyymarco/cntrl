@@ -26,7 +26,7 @@ export default function RootLayout({
                 <StylesSSR />
             </head>
             <body>
-                {/* <Header /> */}
+                <Header />
                 
                 {children}
                 
