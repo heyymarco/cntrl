@@ -1,22 +1,32 @@
-'use client'
-
-import { useEffect, useState } from 'react'
-
-// reusable-ui core:
+// react:
 import {
-    // react helper hooks:
-    useEvent,
-}                           from '@reusable-ui/core'            // a set of reusable-ui packages which are responsible for building any component
+    // react:
+    default as React,
+}                           from 'react'
 
-import styles from './page.module.css'
+// next-js:
+import type {
+    Metadata,
+}                           from 'next'
+
+// private components:
+import {
+    HomePageContent,
+}                           from './page-content'
 
 
 
-export default function Home() {
+// export const metadata: Metadata = {
+//     title       : PAGE_HOME_TITLE,
+//     description : PAGE_HOME_DESCRIPTION,
+// }
+
+
+
+// react components:
+export default function HomePage(): JSX.Element|null {
     // jsx:
     return (
-        <main className={styles.main}>
-            test
-        </main>
-    )
+        <HomePageContent />
+    );
 }

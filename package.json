@@ -12,10 +12,11 @@
     "@cssfn/core": "^3.2.0",
     "@cssfn/cssfn-dom": "^3.2.0",
     "@cssfn/cssfn-react": "^3.2.0",
+    "@heymarco/section": "^6.5.0",
     "@reusable-ui/components": "^6.5.2",
     "@reusable-ui/core": "^6.5.0",
     "color": "^4.2.3",
-    "next": "14.0.4",
+    "next": "^14.0.4",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -24,7 +25,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.0.4",
+    "eslint-config-next": "^14.0.4",
     "typescript": "^5"
   }
 }

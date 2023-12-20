@@ -1,8 +1,9 @@
 import '@reusable-ui/typos/effects'
-import { defineTheme, colorValues, borderValues, borders, borderRadiuses } from '@reusable-ui/core'
+import { defineTheme, colorValues, borderValues, borders, borderRadiuses, colors } from '@reusable-ui/core'
 
 // other libs:
 import Color                from 'color'                // color utilities
+import { buttonValues } from '@reusable-ui/components';
 
 
 
@@ -23,4 +24,10 @@ import Color                from 'color'                // color utilities
 // borderValues.defaultWidth = '4px';
 // borderValues.default = [[borders.style, borders.defaultWidth, borders.color]];
 
-// borderRadiuses.md = '1.5rem' as any;
+borderRadiuses.md = '1.00rem' as any;
+borderRadiuses.md = '1.25rem' as any;
+borderRadiuses.md = '1.50rem' as any;
+
+
+// <Button>:
+// buttonValues.color = colors.white;
