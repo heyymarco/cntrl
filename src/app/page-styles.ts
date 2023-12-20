@@ -14,7 +14,7 @@ import { basics } from '@reusable-ui/components';
 import {
     colors,
     // a responsive management system:
-    ifScreenWidthAtLeast, spacers, usesBackground, usesForeground,
+    ifScreenWidthAtLeast, spacers, typos, usesBackground, usesForeground,
 }                           from '@reusable-ui/core'            // a set of reusable-ui packages which are responsible for building any component
 
 
@@ -42,8 +42,11 @@ export default () => [
         justifyItems: 'center',
         gridTemplate: [[
             '"  pre  " auto',
+            `"......." ${spacers.xs}`,
             '" title " auto',
+            `"......." ${spacers.default}`,
             '" motto " auto',
+            `"......." ${spacers.default}`,
             '"actions" auto',
         ]],
         textAlign: 'center',
@@ -63,5 +66,42 @@ export default () => [
         gridArea: 'actions',
         display: 'flex',
         gap: spacers.default,
+    }),
+    
+    scope('features', {
+        ...children('li', {
+            ...children('div', {
+                display: 'grid',
+                alignItems: 'center',
+                gridTemplate: [[
+                    '"icon   title" auto',
+                    '".... content" auto',
+                    '/',
+                    'min-content 1fr',
+                ]],
+                columnGap: spacers.default,
+                rowGap: spacers.xs,
+                ...children('.icon', {
+                    gridArea: 'icon',
+                }),
+                ...children('.title', {
+                    gridArea: 'title',
+                    margin: 0,
+                }),
+                ...children('.content', {
+                    gridArea: 'content',
+                }),
+            }),
+            ...rule(':not(:first-child)', {
+                ...children('div', {
+                    paddingBlockStart: spacers.default,
+                }),
+            }),
+            ...rule(':not(:last-child)', {
+                ...children('div', {
+                    paddingBlockEnd: spacers.default,
+                }),
+            }),
+        }),
     }),
 ];

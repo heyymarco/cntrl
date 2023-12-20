@@ -9,8 +9,9 @@ import { buttonValues } from '@reusable-ui/components';
 
 // Themes:
 
-// const primaryCol = Color('#9FA742').lighten(0.8);
-// defineTheme('primary', primaryCol);
+const darkCol = Color('#0C0C0C');
+defineTheme('dark', darkCol);
+colorValues.darkBold = Color('#3185FF');
 
 // const goldCol = Color('#D19B3E');
 // defineTheme('gold', goldCol);

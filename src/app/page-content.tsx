@@ -105,42 +105,52 @@ export function HomePageContent(): JSX.Element|null {
                         <ButtonIcon theme='primary' outlined icon='arrow_right_alt' iconPosition='end'>TRY FOR FREE</ButtonIcon>
                     </div>
                 </Article>
-                <Article className={styleSheet.features}>
-                    <List listStyle='flush' mild={false}>
+                <Article>
+                    <List className={styleSheet.features} listStyle='flush' mild={false}>
                         <ListItem>
-                            <Icon icon='lightbulb' />
-                            <h2>Web Assisted AI Search</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a felis tristique, vestibulum mi volutpat, cursus velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed aliquam placerat risus vitae aliquet. Suspendisse nec mi ut lacus posuere pellentesque. 
-                            </p>
+                            <Icon className='icon' theme='primary' mild icon='lightbulb' size='lg' />
+                            <h2 className='title'>Web Assisted AI Search</h2>
+                            <div className='content'>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a felis tristique, vestibulum mi volutpat, cursus velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed aliquam placerat risus vitae aliquet. Suspendisse nec mi ut lacus posuere pellentesque. 
+                                </p>
+                            </div>
                         </ListItem>
                         <ListItem>
-                            <Icon icon='image' />
-                            <h2>AI Image Generation</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a felis tristique, vestibulum mi volutpat, cursus velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed aliquam placerat risus vitae aliquet. Suspendisse nec mi ut lacus posuere pellentesque. 
-                            </p>
+                            <Icon className='icon' theme='primary' mild icon='image' size='lg' />
+                            <h2 className='title'>AI Image Generation</h2>
+                            <div className='content'>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a felis tristique, vestibulum mi volutpat, cursus velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed aliquam placerat risus vitae aliquet. Suspendisse nec mi ut lacus posuere pellentesque. 
+                                </p>
+                            </div>
                         </ListItem>
                         <ListItem>
-                            <Icon icon='account_box' />
-                            <h2>Custom Profiles</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a felis tristique, vestibulum mi volutpat, cursus velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed aliquam placerat risus vitae aliquet. Suspendisse nec mi ut lacus posuere pellentesque. 
-                            </p>
+                            <Icon className='icon' theme='primary' mild icon='account_box' size='lg' />
+                            <h2 className='title'>Custom Profiles</h2>
+                            <div className='content'>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a felis tristique, vestibulum mi volutpat, cursus velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed aliquam placerat risus vitae aliquet. Suspendisse nec mi ut lacus posuere pellentesque. 
+                                </p>
+                            </div>
                         </ListItem>
                         <ListItem>
-                            <Icon icon='settings' />
-                            <h2>Memory Managment</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a felis tristique, vestibulum mi volutpat, cursus velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed aliquam placerat risus vitae aliquet. Suspendisse nec mi ut lacus posuere pellentesque. 
-                            </p>
+                            <Icon className='icon' theme='primary' mild icon='settings' size='lg' />
+                            <h2 className='title'>Memory Managment</h2>
+                            <div className='content'>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a felis tristique, vestibulum mi volutpat, cursus velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed aliquam placerat risus vitae aliquet. Suspendisse nec mi ut lacus posuere pellentesque. 
+                                </p>
+                            </div>
                         </ListItem>
                         <ListItem>
-                            <Icon icon='settings_applications' />
-                            <h2>Custom Plugins</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a felis tristique, vestibulum mi volutpat, cursus velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed aliquam placerat risus vitae aliquet. Suspendisse nec mi ut lacus posuere pellentesque. 
-                            </p>
+                            <Icon className='icon' theme='primary' mild icon='settings_applications' size='lg' />
+                            <h2 className='title'>Custom Plugins</h2>
+                            <div className='content'>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a felis tristique, vestibulum mi volutpat, cursus velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed aliquam placerat risus vitae aliquet. Suspendisse nec mi ut lacus posuere pellentesque. 
+                                </p>
+                            </div>
                         </ListItem>
                     </List>
                 </Article>
