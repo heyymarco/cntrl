@@ -42,12 +42,22 @@ const logoLayout = () => {
 // styles:
 export default () => [
     scope('hero', {
+        display: 'grid',
+        gridTemplate: [[
+            '"intro     intro" auto',
+            '"features signUp" auto',
+            '/',
+            '1fr 1fr'
+        ]],
+        columnGap : '1.75rem',
     }),
     
     
     scope('emphasis', {
         ...emphasisLayout(),
-    }),scope('intro', {
+    }),
+    scope('intro', {
+        gridArea: 'intro',
         display : 'grid',
         justifyItems: 'center',
         gridTemplate: [[
@@ -60,6 +70,7 @@ export default () => [
             '"actions" auto',
         ]],
         textAlign: 'center',
+        paddingBlockEnd: '8.75rem',
     }),
     scope('pre', {
         gridArea: 'pre',
@@ -85,6 +96,7 @@ export default () => [
     }),
     
     scope('features', {
+        gridArea: 'features',
         ...children('li', {
             ...children('div', {
                 display: 'grid',
@@ -120,10 +132,13 @@ export default () => [
                     paddingBlockEnd: spacers.default,
                 }),
             }),
+            borderColor: colors.primaryThin,
         }),
     }),
     
     scope('signUp', {
+        gridArea: 'signUp',
+        alignSelf: 'start',
         display: 'grid',
         gridTemplate: [[
             '"header" auto',
