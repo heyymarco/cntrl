@@ -64,7 +64,12 @@ export default () => [
     }),
     scope('actions', {
         gridArea: 'actions',
-        display: 'flex',
+        display: 'grid',
+        gridTemplate: [[
+            '"watch try" auto',
+            '/',
+            '1fr 1fr',
+        ]],
         gap: spacers.default,
     }),
     
@@ -103,5 +108,9 @@ export default () => [
                 }),
             }),
         }),
+    }),
+    
+    scope('signUp', {
+        padding: spacers.lg,
     }),
 ];

@@ -13,10 +13,8 @@ const darkCol = Color('#0C0C0C');
 defineTheme('dark', darkCol);
 colorValues.darkBold = Color('#3185FF');
 
-// const goldCol = Color('#D19B3E');
-// defineTheme('gold', goldCol);
-// // @ts-ignore
-// colorValues.goldBold = goldCol.darken(1.2);
+const lightCol = Color('#FFFFFF');
+defineTheme('light', lightCol);
 
 
 
@@ -25,9 +23,9 @@ colorValues.darkBold = Color('#3185FF');
 // borderValues.defaultWidth = '4px';
 // borderValues.default = [[borders.style, borders.defaultWidth, borders.color]];
 
-borderRadiuses.md = '1.00rem' as any;
+borderRadiuses.sm = '1.00rem' as any;
 borderRadiuses.md = '1.25rem' as any;
-borderRadiuses.md = '1.50rem' as any;
+borderRadiuses.lg = '2.50rem' as any;
 
 
 // <Button>:

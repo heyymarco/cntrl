@@ -54,6 +54,7 @@ import {
     EmailInput,
     PasswordInput,
     Basic,
+    Button,
 }                           from '@reusable-ui/components'      // a set of official Reusable-UI components
 
 
@@ -101,8 +102,8 @@ export function HomePageContent(): JSX.Element|null {
                         Optimize AI performance, tailor it to your needs, and extract valuable insights from your data with ease. Experience the simplicity of interacting with AI through CNTRL AI.
                     </p>
                     <div className={styleSheet.actions}>
-                        <ButtonIcon theme='primary' icon='play_circle_outline'>WATCH VIDEO</ButtonIcon>
-                        <ButtonIcon theme='primary' outlined icon='arrow_right_alt' iconPosition='end'>TRY FOR FREE</ButtonIcon>
+                        <ButtonIcon theme='primary' size='lg' icon='play_circle_outline'>WATCH VIDEO</ButtonIcon>
+                        <ButtonIcon theme='primary' size='lg' outlined icon='arrow_right_alt' iconPosition='end'>TRY FOR FREE</ButtonIcon>
                     </div>
                 </Article>
                 <Article>
@@ -154,30 +155,36 @@ export function HomePageContent(): JSX.Element|null {
                         </ListItem>
                     </List>
                 </Article>
-                <Article className={styleSheet.signUp}>
+                <Basic tag='aside' className={styleSheet.signUp} theme='primary' size='lg'>
                     <header>
                         <Icon icon='face' />
                         <h2>TRY IT FREE</h2>
+                        <p>
+                            Take control of your AI today
+                        </p>
                     </header>
-                    <Form>
-                        <Group orientation='block'>
-                            <Label>FIRST NAME</Label>
+                    <Form theme='light' enableValidation={false} nude>
+                        <Group orientation='block' listStyle='joined' size='lg'>
+                            <Label theme='inherit'>FIRST NAME</Label>
                             <TextInput name='first-name' />
                         </Group>
-                        <Group orientation='block'>
-                            <Label>LAST NAME</Label>
+                        <Group orientation='block' listStyle='joined' size='lg'>
+                            <Label theme='inherit'>LAST NAME</Label>
                             <TextInput name='last-name' />
                         </Group>
-                        <Group orientation='block'>
-                            <Label>E-MAIL</Label>
+                        <Group orientation='block' listStyle='joined' size='lg'>
+                            <Label theme='inherit'>E-MAIL</Label>
                             <EmailInput name='email' />
                         </Group>
-                        <Group orientation='block'>
-                            <Label>PASSWORD</Label>
+                        <Group orientation='block' listStyle='joined' size='lg'>
+                            <Label theme='inherit'>PASSWORD</Label>
                             <PasswordInput name='password' />
                         </Group>
                     </Form>
-                </Article>
+                    <ButtonIcon icon='arrow_right_alt' iconPosition='end' theme='primary' size='lg'>
+                        GET STARTED TODAY
+                    </ButtonIcon>
+                </Basic>
             </GenericSection>
         </Main>
     );
