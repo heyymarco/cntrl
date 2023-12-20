@@ -40,6 +40,12 @@ const logoLayout = () => {
 export default () => [
     scope('hero', {
         display: 'grid',
+    }),
+    
+    
+    scope('overlay', {
+        gridArea: '1 / 1 / -1 / -1',
+        display: 'grid',
         gridTemplate: [[
             '"intro     intro" auto',
             '"........ ......" 8.75rem',
@@ -48,6 +54,14 @@ export default () => [
             '1fr 1fr'
         ]],
         columnGap : '1.75rem',
+    }),
+    scope('overlay1', {
+    }),
+    scope('overlay2', {
+        zIndex: 999,
+        alignSelf: 'start',
+        position: 'sticky',
+        top: 0,
     }),
     
     
