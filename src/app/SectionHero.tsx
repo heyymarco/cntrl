@@ -3,7 +3,7 @@
 // react:
 import {
     // react:
-    default as React,
+    default as React, useRef,
 }                           from 'react'
 
 // cssfn:
@@ -38,6 +38,7 @@ import {
 
 // styles:
 import './section-hero';
+import { useIsomorphicLayoutEffect } from '@reusable-ui/core'
 const useSectionHeroStyleSheet = dynamicStyleSheets(
     () => import(/* webpackPrefetch: true */'./section-hero')
 , { id: 'section-hero' });
@@ -48,6 +49,51 @@ const useSectionHeroStyleSheet = dynamicStyleSheets(
 export function SectionHero(): JSX.Element|null {
     // styles:
     const styleSheet = useSectionHeroStyleSheet();
+    
+    
+    
+    // // effects:
+    // const scrollingArticleRef = useRef<HTMLElement|null>(null);
+    // useIsomorphicLayoutEffect(() => {
+    //     // conditions:
+    //     const scrollingArticleElm = scrollingArticleRef.current;
+    //     if (!scrollingArticleElm) return;
+    //     
+    //     
+    //     
+    //     // setups:
+    //     let isIntersecting = false;
+    //     const observer = new IntersectionObserver((entries) => {
+    //         const entry = entries[0];
+    //         isIntersecting = entry.isIntersecting;
+    //     }, {
+    //         // root: document.scrollingElement,
+    //         root: null,
+    //         threshold: 0.001,
+    //     });
+    //     observer.observe(scrollingArticleElm);
+    //     
+    //     const handleScroll = async (event: Event) => {
+    //         if (!isIntersecting) return;
+    //         
+    //         
+    //         
+    //         // measure:
+    //         const top = scrollingArticleElm.getBoundingClientRect().top;
+    //         if (top >= 0) return;
+    //         console.log(top);
+    //     };
+    //     const scrollableEvent = document;
+    //     scrollableEvent.addEventListener('scroll', handleScroll);
+    //     
+    //     
+    //     
+    //     // cleanups:
+    //     return () => {
+    //         observer.disconnect();
+    //         scrollableEvent.removeEventListener('scroll', handleScroll);
+    //     };
+    // }, []);
     
     
     
@@ -79,8 +125,8 @@ export function SectionHero(): JSX.Element|null {
                     <ButtonIcon theme='primary' size='xl' outlined icon='arrow_right' iconPosition='end'>TRY FOR FREE</ButtonIcon>
                 </div>
             </Article>
-            <Article>
-                <List className={styleSheet.features} listStyle='flush' mild={false}>
+            <Article className={styleSheet.features} theme='danger'>
+                <List className={styleSheet.featuresList} listStyle='flush' mild={false}>
                     <ListItem>
                         <Icon className='icon' theme='primary' mild icon='bulb' size='lg' />
                         <h2 className='title'>Web Assisted AI Search</h2>

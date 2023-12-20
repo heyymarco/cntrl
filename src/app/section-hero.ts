@@ -42,6 +42,7 @@ export default () => [
         display: 'grid',
         gridTemplate: [[
             '"intro     intro" auto',
+            '"........ ......" 8.75rem',
             '"features signUp" auto',
             '/',
             '1fr 1fr'
@@ -67,7 +68,6 @@ export default () => [
             '"actions" auto',
         ]],
         textAlign: 'center',
-        paddingBlockEnd: '8.75rem',
     }),
     scope('pre', {
         gridArea: 'pre',
@@ -94,6 +94,8 @@ export default () => [
     
     scope('features', {
         gridArea: 'features',
+    }),
+    scope('featuresList', {
         ...children('li', {
             ...children('div', {
                 display: 'grid',
