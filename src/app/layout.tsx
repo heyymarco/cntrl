@@ -8,6 +8,9 @@ import '@/../theme.config'              // custom theme colors
 import {
     Header,
 }                           from './Header'
+import {
+    Footer,
+}                           from './Footer'
 
 
 
@@ -26,6 +29,8 @@ export default function RootLayout({
                 <Header />
                 
                 {children}
+                
+                <Footer />
             </body>
         </html>
     )

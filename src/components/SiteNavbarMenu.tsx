@@ -29,7 +29,7 @@ import {
 }                           from '@reusable-ui/next-compat-link'
 import {
     SiteLogo,
-}                           from './SiteLogo'
+}                           from '@/components/SiteLogo'
 
 
 
