@@ -1,21 +1,18 @@
 // cssfn:
 import {
-    // writes css in javascript:
-    fallback,
     descendants,
     children,
     scope,
     rule,
     style,
 }                           from '@cssfn/core'                  // writes css in javascript
-import { basics, usesIcon } from '@reusable-ui/components';
+import { usesIcon } from '@reusable-ui/components';
 
 // reusable-ui core:
 import {
     borders,
     colors,
-    // a responsive management system:
-    ifScreenWidthAtLeast, spacers, typos, usesBackground, usesForeground,
+    spacers, typos,
 }                           from '@reusable-ui/core'            // a set of reusable-ui packages which are responsible for building any component
 
 
