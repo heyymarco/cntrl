@@ -5,3 +5,25 @@ body {
   padding: 0;
   display: grid;
 }
+
+
+.siteHeader {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+a {
+  text-decoration: none;
+}
+.siteLogo:nth-child(n) {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  gap: 1rem;
+}
+.btnGetStarted {
+  align-self: center;
+}

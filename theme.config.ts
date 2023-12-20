@@ -3,7 +3,7 @@ import { defineTheme, colorValues, borderValues, borders, borderRadiuses, colors
 
 // other libs:
 import Color                from 'color'                // color utilities
-import { basicValues, buttonIconValues, buttonValues, iconConfig } from '@reusable-ui/components';
+import { basicValues, buttonIconValues, buttonValues, iconConfig, navbarValues } from '@reusable-ui/components';
 
 
 
@@ -53,3 +53,8 @@ typoValues.fontSizeLg = '1.125rem';
 headingValues.fontSize1 = '6rem';
 headingValues.fontWeight = 700;
 headingValues.lineHeight = 0.85;
+
+
+// <Navbar>:
+navbarValues.boxSizing = 'border-box';
+navbarValues.blockSize = '4rem';

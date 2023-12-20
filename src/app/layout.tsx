@@ -5,6 +5,10 @@ import { StylesCSR } from './StylesCSR' // dynamic stylesheet (client side)
 import { StylesSSR } from './StylesSSR' // dynamic stylesheet (server side, optional for nextJS)
 import '@/../theme.config'              // custom theme colors
 
+import {
+    Header,
+}                           from './Header'
+
 
 
 export default function RootLayout({
@@ -19,6 +23,8 @@ export default function RootLayout({
                 <StylesSSR />
             </head>
             <body>
+                <Header />
+                
                 {children}
             </body>
         </html>
