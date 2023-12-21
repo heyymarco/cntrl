@@ -12,7 +12,7 @@ import { usesIcon } from '@reusable-ui/components';
 import {
     borders,
     colors,
-    spacers, typos,
+    spacers, typos, usesBorder, usesPadding,
 }                           from '@reusable-ui/core'            // a set of reusable-ui packages which are responsible for building any component
 
 
@@ -31,6 +31,56 @@ const logoLayout = () => {
     const {iconVars} = usesIcon();
     return style({
         [iconVars.size] : '3.875rem',
+    });
+}
+const usesFieldLayout = () => {
+    const {borderVars} = usesBorder();
+    return style({
+        [borderVars.borderColor           ]: 'transparent',
+        [borderVars.borderStartStartRadius]: '3rem',
+        [borderVars.borderStartEndRadius  ]: '3rem',
+        [borderVars.borderEndStartRadius  ]: '3rem',
+        [borderVars.borderEndEndRadius    ]: '3rem',
+        ...descendants('.label', {
+            fontSize: `calc((${typos.fontSizeXs} + ${typos.fontSizeSm}) / 2)`,
+            fontWeight: typos.fontWeightSemibold,
+            justifyContent: 'start',
+            color: colors.primary,
+        }),
+        ...descendants('input', {
+            fontSize: typos.fontSizeMd,
+            padding: spacers.sm,
+        }),
+        ...descendants(['.label', 'input'], {
+            padding: 0,
+            paddingInlineStart: spacers.lg,
+        }),
+    });
+};
+const usesAiExpLayout = () => {
+    const {borderVars} = usesBorder();
+    const {paddingVars} = usesPadding();
+    return style({
+        display: 'grid',
+        paddingInline : '0px',
+        paddingBlock  : '0px',
+        [borderVars.borderWidth] : '0px',
+        ...children('*', {
+            [borderVars.borderWidth] : '0px',
+            ...children(':first-child', {
+                paddingInline : paddingVars.paddingInline,
+                paddingBlock  : paddingVars.paddingBlock,
+            }),
+            ...children(':nth-child(2)', {
+                ...children('*', {
+                    [borderVars.borderStartEndRadius  ]: '3rem',
+                    [borderVars.borderEndEndRadius    ]: '3rem',
+                }),
+            }),
+        }),
+        ...descendants(['.label', '.input'], {
+            background: 'transparent',
+        }),
     });
 }
 
@@ -194,31 +244,20 @@ export default () => [
         gridTemplate: [[
             '"firstname lastname" auto',
             '"email        email" auto',
-            '"password  password" auto',
+            '"phone        phone" auto',
+            '"ai-exp      ai-exp" auto',
+            '"industry  industry" auto',
         ]],
         gap: spacers.default,
         ...children('*', {
-            borderColor: 'transparent',
-            borderRadius: '3rem',
-            ...descendants('.label', {
-                fontSize: `calc((${typos.fontSizeXs} + ${typos.fontSizeSm}) / 2)`,
-                fontWeight: typos.fontWeightSemibold,
-                justifyContent: 'start',
-                color: colors.primary,
-            }),
-            ...descendants('input', {
-                fontSize: typos.fontSizeMd,
-                padding: spacers.sm,
-            }),
-            ...descendants(['.label', 'input'], {
-                padding: 0,
-                paddingInlineStart: spacers.lg,
-            }),
+            ...usesFieldLayout(),
         }),
         ...children('.firstname', { gridArea: 'firstname' }),
         ...children('.lastname', { gridArea: 'lastname' }),
         ...children('.email', { gridArea: 'email' }),
-        ...children('.password', { gridArea: 'password' }),
+        ...children('.phone', { gridArea: 'phone' }),
+        ...children('.ai-exp', { gridArea: 'ai-exp', ...usesAiExpLayout() }),
+        ...children('.industry', { gridArea: 'industry' }),
     }),
     scope('signUpAction', {
         gridArea: 'action',

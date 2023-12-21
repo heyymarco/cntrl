@@ -3,7 +3,7 @@
 // react:
 import {
     // react:
-    default as React, useRef,
+    default as React, useRef, useState,
 }                           from 'react'
 
 // cssfn:
@@ -32,6 +32,9 @@ import {
     PasswordInput,
     Basic,
     Control,
+    TelInput,
+    DropdownListButton,
+    EditableControl,
 }                           from '@reusable-ui/components'      // a set of official Reusable-UI components
 
 // heymarco components:
@@ -57,6 +60,7 @@ export function SectionHero(): JSX.Element|null {
     
     
     
+    // effects:
     const articleIntroRef = useRef<HTMLElement|null>(null);
     const dummyArticleIntroRef = useRef<HTMLDivElement|null>(null);
     useIsomorphicLayoutEffect(() => {
@@ -84,6 +88,12 @@ export function SectionHero(): JSX.Element|null {
             observer.disconnect();
         };
     }, []);
+    
+    
+    
+    // states:
+    const [aiExp, setAiExp] = useState<string>('');
+    const [enableValidation, setEnableValidation] = useState<boolean>(false);
     
     
     
@@ -176,33 +186,61 @@ export function SectionHero(): JSX.Element|null {
                             Take control of your AI today
                         </p>
                     </header>
-                    <Form className={styleSheet.signUpForm} theme='light' enableValidation={false} nude>
+                    <Form className={styleSheet.signUpForm} theme='light' enableValidation={enableValidation} nude>
                         <Control className='firstname' theme='primary' size='lg'>
                             <Group orientation='block' listStyle='flat'>
                                 <Label className='label' theme='inherit'>FIRST NAME</Label>
-                                <TextInput name='first-name' placeholder='John' focused={false} arrived={false} />
+                                <TextInput name='first-name' placeholder='Tony' focused={false} arrived={false} autoCapitalize='words' />
                             </Group>
                         </Control>
                         <Control className='lastname' theme='primary' size='lg'>
                             <Group orientation='block' listStyle='flat'>
                                 <Label className='label' theme='inherit'>LAST NAME</Label>
-                                <TextInput name='last-name' placeholder='John' focused={false} arrived={false} />
+                                <TextInput name='last-name' placeholder='Stark' focused={false} arrived={false} autoCapitalize='words' />
                             </Group>
                         </Control>
                         <Control className='email' theme='primary' size='lg'>
                             <Group orientation='block' listStyle='flat'>
-                                <Label className='label' theme='inherit'>LAST NAME</Label>
+                                <Label className='label' theme='inherit'>EMAIL</Label>
                                 <EmailInput name='email' placeholder='JohnDoe@YoMomma.com' focused={false} arrived={false} />
                             </Group>
                         </Control>
-                        <Control className='password' theme='primary' size='lg'>
+                        <Control className='phone' theme='primary' size='lg'>
                             <Group orientation='block' listStyle='flat'>
-                                <Label className='label' theme='inherit'>PASSWORD</Label>
-                                <PasswordInput name='password' placeholder='••••••••' focused={false} arrived={false} />
+                                <Label className='label' theme='inherit'>PHONE</Label>
+                                <TelInput name='phone' placeholder='08123456789' focused={false} arrived={false} />
+                            </Group>
+                        </Control>
+                        <EditableControl className='ai-exp' theme='primary' size='lg' isValid={!!aiExp}>
+                            <Group orientation='inline'>
+                                <Group orientation='block' listStyle='flat'>
+                                    <Label className='label' theme='inherit'>AI EXPERIENCE</Label>
+                                    <TextInput className='input' name='industry' placeholder='Please Select' focused={false} arrived={false} value={aiExp} readOnly />
+                                </Group>
+                                <DropdownListButton theme='primary' mild floatingPlacement='bottom-end'>
+                                    {['Beginner', 'Intermediate', 'Advanced'].map((option, index) =>
+                                        <ListItem
+                                            key={index}
+                                            active={(option === aiExp)}
+                                            onClick={() => setAiExp(option)}
+                                        >
+                                            {option}
+                                        </ListItem>
+                                    )}
+                                </DropdownListButton>
+                            </Group>
+                        </EditableControl>
+                        <Control className='industry' theme='primary' size='lg'>
+                            <Group orientation='block' listStyle='flat'>
+                                <Label className='label' theme='inherit'>INDUSTRY</Label>
+                                <TextInput name='industry' placeholder='Financial Services' focused={false} arrived={false} autoCapitalize='words' />
                             </Group>
                         </Control>
                     </Form>
-                    <ButtonIcon className={styleSheet.signUpAction} icon='arrow_right' iconPosition='end' theme='primary' size='xl'>
+                    <ButtonIcon className={styleSheet.signUpAction} icon='arrow_right' iconPosition='end' theme='primary' size='xl' onClick={() => {
+                        setEnableValidation(true);
+                        // TODO: submit
+                    }}>
                         GET STARTED TODAY
                     </ButtonIcon>
                 </Basic>
