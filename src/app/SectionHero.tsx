@@ -213,11 +213,11 @@ export function SectionHero(): JSX.Element|null {
                         </Control>
                         <EditableControl className='ai-exp' theme='primary' size='lg' isValid={!!aiExp}>
                             <Group orientation='inline'>
-                                <Group orientation='block' listStyle='flat'>
+                                <Group className='fluid' orientation='block' listStyle='flat'>
                                     <Label className='label' theme='inherit'>AI EXPERIENCE</Label>
                                     <TextInput className='input' name='industry' placeholder='Please Select' focused={false} arrived={false} value={aiExp} readOnly />
                                 </Group>
-                                <DropdownListButton theme='primary' mild floatingPlacement='bottom-end'>
+                                <DropdownListButton className='solid' theme='primary' mild floatingPlacement='bottom-end'>
                                     {['Beginner', 'Intermediate', 'Advanced'].map((option, index) =>
                                         <ListItem
                                             key={index}

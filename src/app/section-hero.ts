@@ -77,6 +77,8 @@ const usesAiExpLayout = () => {
                     [borderVars.borderStartEndRadius  ]: '3rem',
                     [borderVars.borderEndEndRadius    ]: '3rem',
                 }),
+                boxSizing: 'content-box',
+                minInlineSize: '4rem',
             }),
         }),
     });
