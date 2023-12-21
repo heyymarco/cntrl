@@ -190,25 +190,25 @@ export function SectionHero(): JSX.Element|null {
                         <Control className='firstname' theme='primary' size='lg'>
                             <Group orientation='block' listStyle='flat'>
                                 <Label className='label' theme='inherit'>FIRST NAME</Label>
-                                <TextInput name='first-name' placeholder='Tony' focused={false} arrived={false} autoCapitalize='words' />
+                                <TextInput className='input' name='first-name' placeholder='Tony' focused={false} arrived={false} required autoCapitalize='words' />
                             </Group>
                         </Control>
                         <Control className='lastname' theme='primary' size='lg'>
                             <Group orientation='block' listStyle='flat'>
                                 <Label className='label' theme='inherit'>LAST NAME</Label>
-                                <TextInput name='last-name' placeholder='Stark' focused={false} arrived={false} autoCapitalize='words' />
+                                <TextInput className='input' name='last-name' placeholder='Stark' focused={false} arrived={false} required autoCapitalize='words' />
                             </Group>
                         </Control>
                         <Control className='email' theme='primary' size='lg'>
                             <Group orientation='block' listStyle='flat'>
                                 <Label className='label' theme='inherit'>EMAIL</Label>
-                                <EmailInput name='email' placeholder='JohnDoe@YoMomma.com' focused={false} arrived={false} />
+                                <EmailInput className='input' name='email' placeholder='JohnDoe@YoMomma.com' focused={false} required arrived={false} />
                             </Group>
                         </Control>
                         <Control className='phone' theme='primary' size='lg'>
                             <Group orientation='block' listStyle='flat'>
                                 <Label className='label' theme='inherit'>PHONE</Label>
-                                <TelInput name='phone' placeholder='08123456789' focused={false} arrived={false} />
+                                <TelInput className='input' name='phone' placeholder='08123456789' focused={false} required arrived={false} />
                             </Group>
                         </Control>
                         <EditableControl className='ai-exp' theme='primary' size='lg' isValid={!!aiExp}>
@@ -233,7 +233,7 @@ export function SectionHero(): JSX.Element|null {
                         <Control className='industry' theme='primary' size='lg'>
                             <Group orientation='block' listStyle='flat'>
                                 <Label className='label' theme='inherit'>INDUSTRY</Label>
-                                <TextInput name='industry' placeholder='Financial Services' focused={false} arrived={false} autoCapitalize='words' />
+                                <TextInput className='input' name='industry' placeholder='Financial Services' focused={false} arrived={false} required autoCapitalize='words' />
                             </Group>
                         </Control>
                     </Form>

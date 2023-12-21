@@ -51,9 +51,10 @@ const usesFieldLayout = () => {
             fontSize: typos.fontSizeMd,
             padding: spacers.sm,
         }),
-        ...descendants(['.label', 'input'], {
+        ...descendants(['.label', '.input'], {
             padding: 0,
             paddingInlineStart: spacers.lg,
+            background: 'transparent !important',
         }),
     });
 };
@@ -77,9 +78,6 @@ const usesAiExpLayout = () => {
                     [borderVars.borderEndEndRadius    ]: '3rem',
                 }),
             }),
-        }),
-        ...descendants(['.label', '.input'], {
-            background: 'transparent',
         }),
     });
 }
